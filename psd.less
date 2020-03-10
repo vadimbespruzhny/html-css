@@ -1,0 +1,244 @@
+@font-face {
+	font-family: "Amaranth";
+	src: url(fonts/Amaranth-Bold.ttf)
+}
+@font-face {
+	font-family: "Sofia-Regular";
+	src: url(fonts/Sofia-Regular.ttf)
+}
+@font-face {
+	font-family: "Segoe UI 8";
+	src:	url(fonts/Amaranth-Italic.ttf)
+}
+
+@imgcolor: #9072b1;
+
+.adaptiveTablet(@_minwidth, @_maxwidth, @_styles) {
+	@media (min-width: @_minwidth) and (max-width: @_maxwidth) {
+	@_styles();
+	}
+}
+.adaptivePhone(@_minwidth, @_maxwidth, @_styles) {
+	@media (min-width: @_minwidth) and (max-width: @_maxwidth) {
+	@_styles();
+	}
+}
+.body {
+	margin: 0 auto;
+}
+.header {
+    	height: 110px;
+    	position: relative;
+    	.adaptiveTablet(0, 992px, {
+		height: 145px;
+	});
+}
+.logoWrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 200px;
+	height: 72px;
+	position: absolute;
+	top: 25px;
+	background: url(images/logo.png) no-repeat;
+	.adaptiveTablet(0, 992px, {
+		width: 100px;
+		height: 120px;
+		flex-direction: column;
+		margin-left: 15px;
+	});
+	.logoLetter {
+		position: absolute;
+		top: 14px;
+		left: 20px;
+		font-size: 30px;
+		font-weight: bold;
+		color: rgb(255, 255, 255);
+		font-family: "Amarant-Bold";		
+	}
+	.logoText {
+		color: @imgcolor;
+		font-size: 32px;
+		font-family: "Amarant-Bold";
+		text-transform: uppercase;
+		.adaptiveTablet(0, 992px, {
+			margin-right: 26px;
+		})
+	}
+}
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 45px;
+	width: 600px;
+	float: right;
+	font-size: 20px;
+	color: @imgcolor;
+	a {
+		color: @imgcolor;
+		text-decoration: none;
+	}
+	.adaptiveTablet(0, 992px, {
+		max-width: 250px;
+		span {
+			display: none;
+		}
+		i {
+			font-size: 30px;
+		}
+	});
+}
+.content {
+	height: 600px;
+	background: url(images/b0d32f5dcf48141bb5c2843499a15833.jpg);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: justify;
+	.firstText {
+		text-shadow: -4px 5px 0 rgba(130, 105, 157, 0.75);
+		color: #ffffff;
+		font-family: "St Ryde Regular";
+		font-size: 117px;
+	}
+	.secondText {
+		text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.45);
+		color: #ffffff;
+		font-family: "Sofia-Regular";
+		font-size: 31px;
+		line-height: 36px;
+	}
+}
+.hr {
+	max-width: 800px;
+	border: 0.5px solid black;
+	opacity: 0.15;
+	.adaptiveTablet(0, 992px, {
+		max-width: 992px;
+		margin: 20px 30px;
+	});
+}
+.content-2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.mainText {
+	max-width: 700px;
+	color: #494848;
+	font-family: "Amaranth-Italic";
+	font-size: 23px;
+	font-style: italic;
+	line-height: 36px;
+	text-align: justify;
+}
+.left {
+	height: 320px;
+	background: url(images/circle.png) no-repeat;
+	position: relative;
+	.adaptiveTablet(0, 992px, {
+		display: none;
+	});
+	.leftInside	{
+		width: 310px;
+		height: 310px;
+		background: url(images/circleimg.png) no-repeat;
+		position: absolute;
+		top: 20px;
+		left: 19px;
+	
+}
+.right {
+	.rightHeader {
+		color: #505051;
+		font-size: 31px;
+		font-weight: 700;
+	}
+	.rightText {
+		color: #838383;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 28px;
+		text-align: justify;
+	}
+}
+.lastText {
+	display: flex;
+	@media (max-width: 456px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.where {
+		margin: 25px 11px 0 0;
+		font-size: 30px;
+		font-weight: bolder;
+	}
+	.We {
+		margin-top: 25px;
+		font-size: 30px;
+		@media (max-width: 450px) {
+			margin-top: 0;
+		}
+	}	
+}
+.sponsors {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 60px;
+	margin-bottom: 30px;
+	background: #e8e8e8;
+	.sponsorImg {
+		display: flex;
+		align-items: center;
+		height: 70px;
+		margin: 10px 5px 10px 5px;
+	}
+}
+.footer {
+	background: #e8e8e8;
+	.footerInside {
+		height: 75px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.footerInside:before,
+	.footerInside:after {
+		display: none;
+	}
+	.footerRight {
+		display: flex;
+		justify-content: space-between;
+		width: 80px;
+		font-size: 20px;
+		color: white;
+		.footerRightFirst {
+			width: 30px;
+			background: @imgcolor;
+			border-radius: 50%;
+			position: relative;
+			i {
+				position: absolute;
+				left: 9px;
+				top: 5px;
+			}
+		}
+		.footerRightSecond {
+			width: 30px;
+			height: 30px;
+			background: @imgcolor;
+			border-radius: 50%;
+			position: relative;
+			i {
+				position: absolute;
+				left: 6px;
+				top: 5px;
+			}
+		}	
+	}
+}

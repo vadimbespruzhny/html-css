@@ -1,0 +1,245 @@
+@font-face {
+  font-family: "Amaranth";
+  src: url(fonts/Amaranth-Bold.ttf);
+}
+@font-face {
+  font-family: "Sofia-Regular";
+  src: url(fonts/Sofia-Regular.ttf);
+}
+@font-face {
+  font-family: "Segoe UI 8";
+  src: url(fonts/Amaranth-Italic.ttf);
+}
+.body {
+  margin: 0 auto;
+}
+.header {
+  height: 110px;
+  position: relative;
+}
+@media (min-width: 0) and (max-width: 992px) {
+  .header {
+    height: 145px;
+  }
+}
+.logoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  height: 72px;
+  position: absolute;
+  top: 25px;
+  background: url(images/logo.png) no-repeat;
+}
+@media (min-width: 0) and (max-width: 992px) {
+  .logoWrap {
+    width: 100px;
+    height: 120px;
+    flex-direction: column;
+    margin-left: 15px;
+  }
+}
+.logoWrap .logoLetter {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "Amarant-Bold";
+}
+.logoWrap .logoText {
+  color: #9072b1;
+  font-size: 32px;
+  font-family: "Amarant-Bold";
+  text-transform: uppercase;
+}
+@media (min-width: 0) and (max-width: 992px) {
+  .logoWrap .logoText {
+    margin-right: 26px;
+  }
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+  width: 600px;
+  float: right;
+  font-size: 20px;
+  color: #9072b1;
+}
+.navigation a {
+  color: #9072b1;
+  text-decoration: none;
+}
+@media (min-width: 0) and (max-width: 992px) {
+  .navigation {
+    max-width: 250px;
+  }
+  .navigation span {
+    display: none;
+  }
+  .navigation i {
+    font-size: 30px;
+  }
+}
+.content {
+  height: 600px;
+  background: url(images/b0d32f5dcf48141bb5c2843499a15833.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+.content .firstText {
+  text-shadow: -4px 5px 0 rgba(130, 105, 157, 0.75);
+  color: #ffffff;
+  font-family: "St Ryde Regular";
+  font-size: 117px;
+}
+.content .secondText {
+  text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  font-family: "Sofia-Regular";
+  font-size: 31px;
+  line-height: 36px;
+}
+.hr {
+  max-width: 800px;
+  border: 0.5px solid black;
+  opacity: 0.15;
+}
+@media (min-width: 0) and (max-width: 992px) {
+  .hr {
+    max-width: 992px;
+    margin: 20px 30px;
+  }
+}
+.content-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainText {
+  max-width: 700px;
+  color: #494848;
+  font-family: "Amaranth-Italic";
+  font-size: 23px;
+  font-style: italic;
+  line-height: 36px;
+  text-align: justify;
+}
+.left {
+  height: 320px;
+  background: url(images/circle.png) no-repeat;
+  position: relative;
+}
+@media (min-width: 0) and (max-width: 992px) {
+  .left {
+    display: none;
+  }
+}
+.left .leftInside {
+  width: 310px;
+  height: 310px;
+  background: url(images/circleimg.png) no-repeat;
+  position: absolute;
+  top: 20px;
+  left: 19px;
+}
+.right .rightHeader {
+  color: #505051;
+  font-size: 31px;
+  font-weight: 700;
+}
+.right .rightText {
+  color: #838383;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: justify;
+}
+.lastText {
+  display: flex;
+}
+@media (max-width: 456px) {
+  .lastText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.lastText .where {
+  margin: 25px 11px 0 0;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.lastText .We {
+  margin-top: 25px;
+  font-size: 30px;
+}
+@media (max-width: 450px) {
+  .lastText .We {
+    margin-top: 0;
+  }
+}
+.sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  background: #e8e8e8;
+}
+.sponsors .sponsorImg {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  margin: 10px 5px 10px 5px;
+}
+.footer {
+  background: #e8e8e8;
+}
+.footer .footerInside {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footerInside:before,
+.footer .footerInside:after {
+  display: none;
+}
+.footer .footerRight {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  font-size: 20px;
+  color: white;
+}
+.footer .footerRight .footerRightFirst {
+  width: 30px;
+  background: #9072b1;
+  border-radius: 50%;
+  position: relative;
+}
+.footer .footerRight .footerRightFirst i {
+  position: absolute;
+  left: 9px;
+  top: 5px;
+}
+.footer .footerRight .footerRightSecond {
+  width: 30px;
+  height: 30px;
+  background: #9072b1;
+  border-radius: 50%;
+  position: relative;
+}
+.footer .footerRight .footerRightSecond i {
+  position: absolute;
+  left: 6px;
+  top: 5px;
+}
